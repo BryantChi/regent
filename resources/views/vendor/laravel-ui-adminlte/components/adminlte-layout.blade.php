@@ -103,7 +103,7 @@
                 return;
             }
             idleTime = idleTime + 1;
-            if (idleTime > 1) { // 30 分鐘
+            if (idleTime > 30) { // 30 分鐘
                 clearInterval(idleInterval);
                 Swal.fire({
                     title: '注意！',

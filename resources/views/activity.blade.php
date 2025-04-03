@@ -67,7 +67,7 @@
                     if (isset($activities) && count($activities) > 0) {
                         $chunkedData = $activities->chunk(3);
                     } else {
-                        $activities = [
+                        $activity = [
                             ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic06.jpg'],
                             ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
                             ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
@@ -80,7 +80,7 @@
                             ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
                             ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
                         ];
-                        $chunkedData = array_chunk($activities ?? [], 3);
+                        $chunkedData = array_chunk($activity ?? [], 3);
                     }
 
 

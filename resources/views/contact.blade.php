@@ -115,6 +115,12 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="col-12">
+                    <p class="text-e9 font-weight-light mb-0">
+                        無論您正在規劃全新的廚房空間，或是想提升現有的廚房功能與美感，麗晶品櫥的專業團隊都隨時準備為您提供協助與建議。
+                    </p>
+                </div>
             </div>
 
         </div>

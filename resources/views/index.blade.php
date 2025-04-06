@@ -109,7 +109,7 @@
                     <p class="text-e9">
                         歷晶品櫥用心呈現每個細節，讓您的廚原空間更具溫度與品味。
                     </p>
-                    <a href="{{ route('case') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View
+                    <a href="{{ route('cases') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View
                         More</a>
                 </div>
             </div>

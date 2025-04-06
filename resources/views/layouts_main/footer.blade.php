@@ -60,9 +60,9 @@
                 <p class="text-967d56">Quick Links</p>
                 <p class="mb-2"><a href="{{route('about')}}" class="text-e9">關於麗晶</a></p>
                 <p class="mb-2"><a href="{{route('cases')}}" class="text-e9">案例分享</a></p>
-                <p class="mb-2"><a href="javascript:void(0)" class="text-e9">活動訊息</a></p>
-                <p class="mb-2"><a href="javascript:void(0)" class="text-e9">聯絡我們</a></p>
-                <p class="mb-2"><a href="javascript:void(0)" class="text-e9">門市據點</a></p>
+                <p class="mb-2"><a href="{{route('activity')}}" class="text-e9">活動訊息</a></p>
+                <p class="mb-2"><a href="{{route('contact')}}" class="text-e9">聯絡我們</a></p>
+                <p class="mb-2"><a href="{{route('stores')}}" class="text-e9">門市據點</a></p>
             </div>
 
         </div>

@@ -20,7 +20,7 @@
                         自1994年成立以來，麗晶品櫥已在花蓮耕耘了30餘年。<br>
                         專注於廚具與櫥櫃品牌的經營與發展，致力將歐洲廚具的設計美學與國人的使用習慣完美結合，創造出符合現代家庭需求的高品質廚具空間。
                     </p>
-                    <a href="javascript:void(0);" class="btn-more"><span class="more-arrow mr-3">→</span>View
+                    <a href="{{ route('about') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View
                         More</a>
 
                     <div class="text-lg-right w-100 mt-4">
@@ -109,7 +109,7 @@
                     <p class="text-e9">
                         歷晶品櫥用心呈現每個細節，讓您的廚原空間更具溫度與品味。
                     </p>
-                    <a href="javascript:void(0);" class="btn-more"><span class="more-arrow mr-3">→</span>View
+                    <a href="{{ route('case') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View
                         More</a>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                             麗晶品櫥活動期間限定特惠，<br>
                             與您一起實現理想廚房空間。
                         </p>
-                        <a href="javascript:void(0);" class="btn-more"><span class="more-arrow mr-3">→</span>View More</a>
+                        <a href="{{ route('activity') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View More</a>
                     </div>
                 </div>
                 <div class="col-lg-9 d-block d-lg-flex justify-content-around mt-lg-0 mt-5">
@@ -182,7 +182,7 @@
                     </div>
 
                     <div>
-                        <a href="javascript:void(0);">
+                        <a href="{{ route('stores') }}">
                             <img src="{{asset('assets/images/00-hp/bu_arrow.png')}}" class="img-fluid" alt="">
                         </a>
                     </div>
@@ -196,7 +196,7 @@
                     </div>
 
                     <div>
-                        <a href="javascript:void(0);">
+                        <a href="{{ route('contact') }}">
                             <img src="{{asset('assets/images/00-hp/bu_arrow_rollin.png')}}" class="img-fluid" alt="">
                         </a>
                     </div>

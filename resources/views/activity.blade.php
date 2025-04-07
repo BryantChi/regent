@@ -1,14 +1,14 @@
 @extends('layouts_main.master')
 
 @section('content')
-    <div class="container-xxl py-5 activity-bg bg-23">
+    <div class="container-xxl py-5 activity-bg">
 
         <div class="container-fluid px-md-5">
             <div class="row justity-content-center" id="activity">
                 <div class="col-12 mb-4">
                     <div class="pg-title-section text-center">
                         <h2 class="text-e9">活動訊息</h2>
-                        <p class="text-967d56 font-weight-light">
+                        <p class="text-997d53 font-weight-light">
                             Activity
                         </p>
                     </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-10">
                     <div class="col-12 d-flex justify-content-end">
-                        <p class="text-967d56 font-weight-light" style="font-size: 14px;">共 {{ 0 }} 則訊息
+                        <p class="text-997d53 font-weight-light" style="font-size: 14px;">共 {{ 0 }} 則訊息
                         </p>
                     </div>
 
@@ -87,10 +87,10 @@
                     @endphp
 
                     @foreach ($chunkedData ?? [] as $rowIndex => $row)
-                    <div class="row py-4 border-bottom {{ $loop->last ? 'last-row' : '' }}">
+                    <div class="row py-4 border-bottom mx-lg-auto mx-1 {{ $loop->last ? 'last-row' : '' }}">
 
                         @foreach ($row as $colIndex => $activity)
-                        <div class="col-lg-4 d-flex align-items-center pr-lg-3 pb-lg-auto pb-3 {{ $colIndex < count($row) - 1 ? 'border-end' : '' }}">
+                        <div class="col-lg-4 d-flex align-items-center pr-lg-3 pb-lg-auto py-lg-auto py-3 {{ $colIndex < count($row) - 1 ? 'border-end' : '' }}">
                             <div class="hp-activity-box m-lg-3w">
                                 <div class="hab-content1 mb-5">
                                     <p class="hp-activity-date text-a7 mb-0">{{ \Carbon\Carbon::parse($activity->created_at ?? new DateTime())->format('Y.m.d')}}</p>
@@ -99,12 +99,12 @@
                                     </a>
                                     {{-- <a href="{{ route('activity-details', ['id' => $course->id, 'classification_id' => request('classification_id')]) }}"> --}}
                                     <a href="{{ route('activity-details-mock')}}">
-                                        <h4 class="text-967d56 multiline-ellipsis-1">{{ $activity->title ?? '網站正式啟用' }}</h4>
+                                        <h4 class="text-caa883 multiline-ellipsis-1">{{ $activity->title ?? '網站正式啟用' }}</h4>
                                     </a>
                                 </div>
 
                                 <div class="hab-content02 d-flex flex-column">
-                                    <a href="javascript:void(0);" class="{{ $colIndex == 0 ? 'text-e9' : 'text-967d56' }}">MORE →</a>
+                                    <a href="javascript:void(0);" class="text-a-more">MORE →</a>
                                     {{-- <a href="{{ route('activity-details', ['id' => $course->id, 'classification_id' => request('classification_id')]) }}"> --}}
                                     <a href="{{ route('activity-details-mock')}}">
                                         {{-- <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . $activity->image }}" class="img-fluid" alt=""> --}}

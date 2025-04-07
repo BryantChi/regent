@@ -8,7 +8,7 @@
                 <div class="col-12 mb-4">
                     <div class="pg-title-section text-center">
                         <h2 class="text-e9">聯絡我們</h2>
-                        <p class="text-967d56 font-weight-light mb-4">
+                        <p class="text-997d53 font-weight-light mb-4">
                             Contact
                         </p>
                     </div>
@@ -47,7 +47,7 @@
                         </div>
                     @endif
 
-                    <h5 class="mb-4 text-967d56"><span class="required"></span>為必填或必選欄位</h5>
+                    <h5 class="mb-4 text-997d53"><span class="required"></span>為必填或必選欄位</h5>
 
                     <form method="POST" action="{{ route('requirements.store') }}" id="requirements-form">
                         {{-- CSRF Token --}}

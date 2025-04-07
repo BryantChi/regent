@@ -82,13 +82,13 @@
     </a>
 
     <div class="d-none d-md-block social-links-btn social-style">
-        <a href="" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_line.png')}}"
+        <a href="https://line.me/R/ti/p/@xyn0189f" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_line.png')}}"
                 class="img-fluid left-line-img" width="32" alt=""></a>
-        <div class="social-line mx-auto my-2"></div>
-        <a href="" class="d-none d-md-block">
+        <div class="social-line mx-auto my-22"></div>
+        <a href="https://ig.me/m/regent_1994" class="d-none d-md-block">
             <img src="{{asset('assets/images/00-hp/left_ig.png')}}" class="img-fluid left-ig-img" width="32" alt=""></a>
-        <div class="social-line mx-auto my-2"></div>
-        <a href="" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_mes.png')}}"
+        <div class="social-line mx-auto my-22"></div>
+        <a href="https://www.facebook.com/messages/t/191982250846810?locale=zh_TW" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_mes.png')}}"
                 class="img-fluid left-msg-img" width="32" alt=""></a>
     </div>
 
@@ -96,22 +96,22 @@
     <div class="d-flex d-md-none w-100 position-fixed bottom-0 left-0 social-links-btn-mobile">
         <div class="row justify-content-center align-content-center text-center px-0 py-2 m-0 w-100">
             <div class="col-3 s-line-btn align-self-center flex-column">
-                <a href="" target="_blank">
+                <a href="https://line.me/R/ti/p/@xyn0189f" target="_blank">
                     <img src="{{asset('assets/images/mobile/mo_line.png')}}" class="img-fluid" width="32" alt=""><br> 加入好友
                 </a>
             </div>
             <div class="col-3 s-phone-btn align-self-center flex-column">
-                <a href="tel:" target="_blank">
+                <a href="tel:03-8321000" target="_blank">
                     <img src="{{asset('assets/images/mobile/mo_phone.png')}}" class="img-fluid" width="32" alt=""><br> 來電預約
                 </a>
             </div>
             <div class="col-3 s-location-btn align-self-center flex-column">
-                <a href="" target="_blank">
+                <a href="https://www.facebook.com/messages/t/191982250846810?locale=zh_TW" target="_blank">
                     <img src="{{asset('assets/images/mobile/mo_mes.png')}}" class="img-fluid" width="32" alt=""><br> 線上諮詢
                 </a>
             </div>
             <div class="col-3 s-location-btn align-self-center flex-column">
-                <a href="" target="_blank">
+                <a href="https://ig.me/m/regent_1994" target="_blank">
                     <img src="{{asset('assets/images/mobile/mo_ig.png')}}" class="img-fluid" width="32" alt=""><br> 語音通話
                 </a>
             </div>

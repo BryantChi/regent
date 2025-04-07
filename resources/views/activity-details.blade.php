@@ -1,14 +1,14 @@
 @extends('layouts_main.master')
 
 @section('content')
-    <div class="container-xxl py-5 activity-bg bg-23">
+    <div class="container-xxl py-5 activity-bg">
 
         <div class="container-fluid px-md-5">
             <div class="row justity-content-center" id="activity">
                 <div class="col-12 mb-4">
                     <div class="pg-title-section text-center">
                         <h2 class="text-e9">活動訊息</h2>
-                        <p class="text-967d56 font-weight-light">
+                        <p class="text-997d53 font-weight-light">
                             Activity
                         </p>
                     </div>
@@ -57,11 +57,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-10 mt-lg-0 mt-4">
                     <div class="row">
                         <div class="col-12 mb-4">
                             <div class="activity-title text-center">
-                                <h2 class="text-967d56 font-weight-normal w-100">{{ $activity->title ?? '網站正式啟用' }}</h2>
+                                <h2 class="text-cba783 font-weight-normal w-100">{{ $activity->title ?? '網站正式啟用' }}</h2>
                                 <p class="text-e9 font-weight-light mb-0" style="font-size: 14px;">
                                     {{ \Carbon\Carbon::parse($activity->created_at ?? '')->format('Y.m.d') ?? '2024.12.15' }} ・
                                     {{ \App\Models\Admin\Category::find($activity->classification_id ?? '')->name ?? '未分類' }}
@@ -107,7 +107,7 @@
 
                         </div>
 
-                        <div class="col-12 text-center border-top-967d56 py-3 mt-3">
+                        <div class="col-12 text-center border-top-997d53 py-3 mt-3">
                             <a href="{{ route('activity') }}" class="btn-back"><span class="back-arrow mr-3">←</span>BACK
                                 返回列表</a>
                         </div>

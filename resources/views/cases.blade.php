@@ -8,7 +8,7 @@
                 <div class="col-12 mb-4">
                     <div class="pg-title-section text-center">
                         <h2 class="text-e9">案例分享</h2>
-                        <p class="text-967d56 font-weight-light">
+                        <p class="text-997d53 font-weight-light">
                             Cases
                         </p>
                     </div>
@@ -60,20 +60,20 @@
                 </div>
                 <div class="col-lg-10">
                     <div class="col-12 d-flex justify-content-end">
-                        <p class="text-967d56 font-weight-light" style="font-size: 14px;">共 {{ $cases->total() ?? 0 }} 件案例
+                        <p class="text-997d53 font-weight-light" style="font-size: 14px;">共 {{ $cases->total() ?? 0 }} 件案例
                         </p>
                     </div>
 
 
                     @foreach ($cases ?? [] as $key => $case)
                         <div class="row mb-4">
-                            <div class="col-lg-6 {{ $key % 2 == 0 ? '' : 'order-lg-2 order-1' }}">
+                            <div class="col-lg-6 align-self-center mb-lg-0 mb-4 {{ $key % 2 == 0 ? '' : 'order-lg-2 order-1' }}">
                                 <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . $case->image }}"
                                     class="img-fluid" alt="">
                             </div>
-                            <div class="col-lg-6 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}">
+                            <div class="col-lg-6 align-self-center mb-lg-0 mb-3 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}">
                                 <a href="{{ route('cases', ['category_id' => $case->category_id]) }}">
-                                    <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #967d56;">
+                                    <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">
                                         {{ \App\Models\Admin\Category::find($case->category_id)->name }}</h6>
                                 </a>
                                 <a
@@ -93,19 +93,19 @@
                                     {!! $preview ?? '' !!}
                                 </div>
                                 <a href="{{ route('cases-details', ['id' => $case->id, 'category_id' => request('category_id')]) }}"
-                                    class="text-967d56">MORE →</a>
+                                    class="text-a-more">MORE →</a>
                             </div>
                         </div>
                     @endforeach
                     <div class="row mb-4">
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 align-self-center mb-lg-0 mb-4">
                             <a href="{{ route('cases-details-mock')}}">
                                 <img src="{{ asset('assets/images/02/02_pic01.jpg') }}" class="img-fluid" alt="">
                             </a>
                         </div>
-                        <div class="col-lg-6">
-                            <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #967d56;">酒櫃設計</h6>
+                        <div class="col-lg-6 align-self-center mb-lg-0 mb-3">
+                            <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">酒櫃設計</h6>
                             <a href="{{ route('cases-details-mock')}}">
                                 <h4 class="text-e9 mb-3">陳府別墅</h4>
                             </a>
@@ -118,16 +118,16 @@
                                     度下恆久保存。
                                 </p>
                             </a>
-                            <a href="{{ route('cases-details-mock')}}" class="text-967d56">MORE →</a>
+                            <a href="{{ route('cases-details-mock')}}" class="text-a-more">MORE →</a>
                         </div>
                     </div>
 
                     <div class="row mb-4">
-                        <div class="col-lg-6 order-lg-2 order-1">
+                        <div class="col-lg-6 align-self-center mb-lg-0 mb-4 order-lg-2 order-1">
                             <img src="{{ asset('assets/images/02/02_pic01.jpg') }}" class="img-fluid" alt="">
                         </div>
-                        <div class="col-lg-6 order-lg-1 order-2">
-                            <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #967d56;">廚房設計</h6>
+                        <div class="col-lg-6 align-self-center mb-lg-0 mb-3 order-lg-1 order-2">
+                            <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">廚房設計</h6>
                             <h4 class="text-e9 mb-3">張府私宅</h4>
 
                             <p class="text-e9 font-weight-light multiline-ellipsis-4">
@@ -136,7 +136,7 @@
                                 理石檯面、以及內嵌的燈光設計，讓廚房既具現代感又充滿溫馨氛圍，成
                                 為家中最具吸引力的場所。
                             </p>
-                            <a href="javascript:void(0);" class="text-967d56">MORE →</a>
+                            <a href="javascript:void(0);" class="text-a-more">MORE →</a>
                         </div>
                     </div>
                 </div>

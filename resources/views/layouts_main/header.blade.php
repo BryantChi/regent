@@ -28,15 +28,15 @@
 
                     <ul class="site-menu js-clone-nav ml-auto d-none d-lg-block">
                         <li><a href="{{route('about')}}" class="p-lg-auto px-0 pb-0">關於麗晶</a><br
-                                class="d-lg-block d-none"><span>About</span></li>
+                                class="d-lg-block d-none line-height-0"><span>About</span></li>
                         <li><a href="{{route('cases')}}" class="p-lg-auto px-0 pb-0">案例分享</a><br
-                                class="d-lg-block d-none"><span>Cases</span></li>
+                                class="d-lg-block d-none line-height-0"><span>Cases</span></li>
                         <li><a href="{{route('activity')}}" class="p-lg-auto px-0 pb-0">活動訊息</a><br
-                                class="d-lg-block d-none"><span>Activity</span></li>
+                                class="d-lg-block d-none line-height-0"><span>Activity</span></li>
                         <li><a href="{{route('contact')}}" class="p-lg-auto px-0 pb-0">聯絡我們</a><br
-                                class="d-lg-block d-none"><span>Contact</span></li>
+                                class="d-lg-block d-none line-height-0"><span>Contact</span></li>
                         <li><a href="{{route('stores')}}" class="p-lg-auto px-0 pb-0">門市據點</a><br
-                                class="d-lg-block d-none"><span>Stores</span></li>
+                                class="d-lg-block d-none line-height-0"><span>Stores</span></li>
                         <!-- <li class="has-children active">
           <a href="index.html">Home</a>
           <ul class="dropdown">

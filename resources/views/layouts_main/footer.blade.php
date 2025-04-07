@@ -20,44 +20,44 @@
 
             <div class="col-lg-auto mb-3">
                 <p class="text-e9 mb-0">中華店</p>
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Tel | </span>03-8321000
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Tel | </span>03-8321000
                 </p>
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Fax | </span>03-8320333
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Fax | </span>03-8320333
                 </p>
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Address |
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Address |
                     </span>花蓮市中華路331號</p>
             </div>
 
             <div class="col-lg-auto mb-3">
                 <p class="text-e9 mb-0">林森店</p>
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Tel | </span>03-8322852
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Tel | </span>03-8322852
                 </p>
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Fax | </span>03-8340523
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Fax | </span>03-8340523
                 </p>
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Address | </span>花蓮市林森路36號
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Address | </span>花蓮市林森路36號
                 </p>
             </div>
 
             <div class="col-lg-auto mb-3">
-                <p class="text-e9 mb-0 font-weight-light"><span class="text-967d56">Line Id | </span>@xyn0189f
+                <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Line Id | </span>@xyn0189f
                 </p>
-                <a href="javascript:void(0)"><img src="{{asset('assets/images/00-hp/footer_qr.svg')}}" class="img-fluid my-2"
+                <a href="https://line.me/R/ti/p/@xyn0189f"><img src="{{asset('assets/images/00-hp/footer_qr.svg')}}" class="img-fluid my-2"
                         alt=""></a>
                 <p class="text-e9 mb-0 font-weight-light">
-                    <span class="text-967d56">Mail | </span>
+                    <span class="text-997d53">Mail | </span>
                     <a href="mailto:a322852@hotmail.com" class="text-e9">a322852@hotmail.com</a>
                 </p>
                 <p class="text-e9 mb-0 font-weight-light">
-                    <span class="text-967d56">Follow Us | </span>
-                    <a href="javascript:void(0)"><img src="{{asset('assets/images/00-hp/footer_fb.png')}}" class="img-fluid"
+                    <span class="text-997d53">Follow Us | </span>
+                    <a href="https://www.facebook.com/regent.kitchen/?locale=zh_TW"><img src="{{asset('assets/images/00-hp/footer_fb.png')}}" class="img-fluid"
                             alt=""></a>
-                    <a href="javascript:void(0)"><img src="{{asset('assets/images/00-hp/footer_ig.png')}}" class="img-fluid"
+                    <a href="https://www.instagram.com/regent_1994/?igsh=MW96aGF6OWdpMGlvaw%3D%3D"><img src="{{asset('assets/images/00-hp/footer_ig.png')}}" class="img-fluid"
                             alt=""></a>
                 </p>
             </div>
 
             <div class="col-lg-auto mb-3">
-                <p class="text-967d56">Quick Links</p>
+                <p class="text-997d53">Quick Links</p>
                 <p class="mb-2"><a href="{{route('about')}}" class="text-e9">關於麗晶</a></p>
                 <p class="mb-2"><a href="{{route('cases')}}" class="text-e9">案例分享</a></p>
                 <p class="mb-2"><a href="{{route('activity')}}" class="text-e9">活動訊息</a></p>
@@ -70,7 +70,9 @@
 
 <!-- Copyright Start -->
 <div class="container-fluid copyright py-2">
+    <div class="copyright-line mb-3 px-3"></div>
     <div class="container">
+
         <div class="row justify-content-center">
             <div class="col-md-auto text-center text-md-end mb-0">
                 <p class="mb-0 font-weight-light">

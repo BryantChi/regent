@@ -82,13 +82,13 @@
     </a>
 
     <div class="d-none d-md-block social-links-btn social-style">
-        <a href="https://line.me/R/ti/p/@xyn0189f" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_line.png')}}"
+        <a href="https://line.me/R/ti/p/@xyn0189f" target="_blank" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_line.png')}}"
                 class="img-fluid left-line-img" width="32" alt=""></a>
         <div class="social-line mx-auto my-22"></div>
-        <a href="https://ig.me/m/regent_1994" class="d-none d-md-block">
+        <a href="https://ig.me/m/regent_1994" target="_blank" class="d-none d-md-block">
             <img src="{{asset('assets/images/00-hp/left_ig.png')}}" class="img-fluid left-ig-img" width="32" alt=""></a>
         <div class="social-line mx-auto my-22"></div>
-        <a href="https://www.facebook.com/messages/t/191982250846810?locale=zh_TW" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_mes.png')}}"
+        <a href="https://www.facebook.com/messages/t/191982250846810?locale=zh_TW" target="_blank" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_mes.png')}}"
                 class="img-fluid left-msg-img" width="32" alt=""></a>
     </div>
 

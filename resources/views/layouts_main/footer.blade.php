@@ -41,17 +41,17 @@
             <div class="col-lg-auto mb-3">
                 <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Line Id | </span>@xyn0189f
                 </p>
-                <a href="https://line.me/R/ti/p/@xyn0189f"><img src="{{asset('assets/images/00-hp/footer_qr.svg')}}" class="img-fluid my-2"
+                <a href="https://line.me/R/ti/p/@xyn0189f" target="_blank"><img src="{{asset('assets/images/00-hp/footer_qr.svg')}}" class="img-fluid my-2"
                         alt=""></a>
                 <p class="text-e9 mb-0 font-weight-light">
                     <span class="text-997d53">Mail | </span>
-                    <a href="mailto:a322852@hotmail.com" class="text-e9">a322852@hotmail.com</a>
+                    <a href="mailto:a322852@hotmail.com" target="_blank" class="text-e9">a322852@hotmail.com</a>
                 </p>
                 <p class="text-e9 mb-0 font-weight-light">
                     <span class="text-997d53">Follow Us | </span>
-                    <a href="https://www.facebook.com/regent.kitchen/?locale=zh_TW"><img src="{{asset('assets/images/00-hp/footer_fb.png')}}" class="img-fluid"
+                    <a href="https://www.facebook.com/regent.kitchen/?locale=zh_TW" target="_blank"><img src="{{asset('assets/images/00-hp/footer_fb.png')}}" class="img-fluid"
                             alt=""></a>
-                    <a href="https://www.instagram.com/regent_1994/?igsh=MW96aGF6OWdpMGlvaw%3D%3D"><img src="{{asset('assets/images/00-hp/footer_ig.png')}}" class="img-fluid"
+                    <a href="https://www.instagram.com/regent_1994/?igsh=MW96aGF6OWdpMGlvaw%3D%3D" target="_blank"><img src="{{asset('assets/images/00-hp/footer_ig.png')}}" class="img-fluid"
                             alt=""></a>
                 </p>
             </div>

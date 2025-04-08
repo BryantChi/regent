@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row" id="about">
                 <div class="col-lg-6">
-                    <img src="{{asset('assets/images/00-hp/in_pic01.jpg')}}" class="img-fluid mb-3" alt="">
+                    <img src="{{ asset('assets/images/00-hp/in_pic01.jpg') }}" class="img-fluid mb-3" alt="">
                     <small class="mb-4 text-e9">High-quality kitchen space that meets the needs of modern
                         families.</small>
                     <p class="text-e9 mt-4">
@@ -24,7 +24,8 @@
                         More</a>
 
                     <div class="text-lg-right w-100 mt-4">
-                        <img src="{{asset('assets/images/00-hp/in_pic02.jpg')}}" class="img-fluid w-75 mb-3" alt="">
+                        <img src="{{ asset('assets/images/00-hp/in_pic02.jpg') }}" class="img-fluid w-75 mb-3"
+                            alt="">
                     </div>
 
 
@@ -43,8 +44,8 @@
                 <div class="col-12 mt-5 hp-ab-s2">
                     <div class="text-center">
                         <picture>
-                            <source media="(max-width: 640px)" srcset="{{asset('assets/images/00-hp/in_pic3_640.png')}}">
-                            <img src="{{asset('assets/images/00-hp/in_pic3_1608.png')}}" class="img-fluid" alt="">
+                            <source media="(max-width: 640px)" srcset="{{ asset('assets/images/00-hp/in_pic3_640.png') }}">
+                            <img src="{{ asset('assets/images/00-hp/in_pic3_1608.png') }}" class="img-fluid" alt="">
                         </picture>
                         <h5 class="text-caa883 mt-3" style="line-height: 1.8rem;">麗晶的專業設計，滿足您對理想廚房的所有想像；每一處用心，成就您的高品質生活</h5>
                     </div>
@@ -64,33 +65,83 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <div class="col-lg-7">
-                    <img src="{{asset('assets/images/00-hp/in_pic04.jpg')}}" class="img-fluid" alt="">
+                <div class="col-lg-7 align-self-center">
+                    {{-- <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . ($cases[0]->image ?? '') }}"
+                                    class="img-fluid" alt=""> --}}
+                    <img src="{{ asset('assets/images/00-hp/in_pic04.jpg') }}" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-5 pt-5 pl-lg-4">
-                    <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">酒櫃設計</h6>
-                    <h4 class="text-e9 mb-3">陳府別墅</h4>
+                <div class="col-lg-5 pt-5 pl-lg-4 align-self-center">
+                    <a href="{{ route('cases', ['category_id' => $cases[0]->category_id ?? '']) }}">
+                        <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
+                            {{ \App\Models\Admin\Category::find($cases[0]->category_id ?? '')->name ?? '未分類' }}</h6>
+                        {{-- <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">酒櫃設計</h6> --}}
+                    </a>
+                    {{-- <a href="{{ route('cases-details', ['id' => $cases[0]->id, 'category_id' => request('category_id')]) }}"> --}}
+                    <a href="{{ route('cases-details-mock') }}">
+                        <h4 class="text-e9 mb-3">{{ $cases[0]->title ?? '陳府別墅' }}</h4>
+                        {{-- <h4 class="text-e9 mb-3">陳府別墅</h4> --}}
+                    </a>
 
-                    <p class="text-ac">
+                    @php
+                        // 移除圖片標籤
+                        $cleanContent = preg_replace('/<img[^>]*>/i', '', $cases[0]->content ?? '紅酒櫃設計不只是簡單的收納，更是要在美觀與實用之間取得平衡。我們的設計師考量到每位顧客的空間需求和個人風格，從材質、色彩、到照明，每一個細節都精心打造，使紅酒櫃成為空間中的藝術品。透過環繞的燈光設計，紅酒櫃可以營造出高雅且舒適的氛圍，讓紅酒在合適的溫度和濕度下恆久保存。');
+                        // 移除其他 HTML 標籤
+                        $cleanText = strip_tags($cleanContent);
+                        // 截取前100字（處理UTF-8中文）
+                        $preview = mb_substr($cleanText, 0, 100);
+                    @endphp
+                    <div class="text-ac font-weight-bold multiline-ellipsis-4 mb-3" style="font-weight: 600;">
+                        {!! $preview ?? '' !!}
+                    </div>
+                    {{-- <a href="{{ route('cases-details', ['id' => $cases[0]->id, 'category_id' => request('category_id')]) }}" --}}
+                    <a href="{{ route('cases-details-mock') }}"
+                        class="text-a-more">MORE →</a>
+                    {{-- <p class="text-ac">
                         紅酒櫃設計不只是簡單的收納，更是要在美觀與實用之間取得平衡。我們的設計師考量到每位顧客的空間需求和個人風格，從材質、色彩、到照明，每一個細節都精心打造，使紅酒櫃成為空間中的藝術品。透過環繞的燈光設計，紅酒櫃可以營造出高雅且舒適的氛圍，讓紅酒在合適的溫度和濕度下恆久保存。
-                    </p>
-                    <a href="javascript:void(0);" class="text-a-more">MORE →</a>
+                    </p> --}}
+                    {{-- <a href="javascript:void(0);" class="text-a-more">MORE →</a> --}}
                 </div>
             </div>
 
             <div class="row mt-5">
 
-                <div class="col-lg-5 pt-5 pl-lg-4 ">
-                    <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">廚房設計</h6>
-                    <h4 class="text-e9 mb-3">張府私宅</h4>
+                <div class="col-lg-5 pt-5 pl-lg-4 align-self-center">
+                    <a href="{{ route('cases', ['category_id' => $cases[1]->category_id ?? '']) }}">
+                        <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
+                            {{ \App\Models\Admin\Category::find($cases[1]->category_id ?? '')->name ?? '未分類' }}</h6>
+                        {{-- <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">廚房設計</h6> --}}
+                        {{-- <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">廚房設計</h6> --}}
+                    </a>
+                    {{-- <a href="{{ route('cases-details', ['id' => $cases[1]->id, 'category_id' => request('category_id')]) }}"> --}}
+                    <a href="{{ route('cases-details-mock') }}">
+                        <h4 class="text-e9 mb-3">{{ $cases[1]->title ?? '張府私宅' }}</h4>
+                        {{-- <h4 class="text-e9 mb-3">張府私宅</h4> --}}
+                    </a>
 
-                    <p>
+                    @php
+                        // 移除圖片標籤
+                        $cleanContent = preg_replace('/<img[^>]*>/i', '', $cases[1]->content ?? '廚櫃的材質和色彩選擇也是設計中的重要一環。通過高品質的材質和多樣的色彩搭配，使廚房櫃體既耐用又富有質感。溫暖的木質面板、光滑的大理石檯面、以及內嵌的燈光設計，讓廚房既具現代感又充滿溫馨氛圍，成為家中最具吸引力的場所。');
+                        // 移除其他 HTML 標籤
+                        $cleanText = strip_tags($cleanContent);
+                        // 截取前100字（處理UTF-8中文）
+                        $preview = mb_substr($cleanText, 0, 100);
+                    @endphp
+                    <div class="text-ac font-weight-bold multiline-ellipsis-4 mb-3" style="font-weight: 600;">
+                        {{-- <div class="text-ac font-weight-bold multiline-ellipsis-4 mb-2"> --}}
+                        {!! $preview ?? '' !!}
+                    </div>
+                    {{-- <a href="{{ route('cases-details', ['id' => $cases[1]->id, 'category_id' => request('category_id')]) }}" --}}
+                    <a href="{{ route('cases-details-mock') }}"
+                        class="text-a-more">MORE →</a>
+                    {{-- <p>
                         廚櫃的材質和色彩選擇也是設計中的重要一環。通過高品質的材質和多樣的色彩搭配，使廚房櫃體既耐用又富有質感。溫暖的木質面板、光滑的大理石檯面、以及內嵌的燈光設計，讓廚房既具現代感又充滿溫馨氛圍，成為家中最具吸引力的場所。
                     </p>
-                    <a href="javascript:void(0);" class="text-a-more">MORE →</a>
+                    <a href="javascript:void(0);" class="text-a-more">MORE →</a> --}}
                 </div>
-                <div class="col-lg-7">
-                    <img src="{{asset('assets/images/00-hp/in_pic05.jpg')}}" class="img-fluid" alt="">
+                <div class="col-lg-7 align-self-center">
+                    {{-- <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . ($cases[1]->image ?? '') }}"
+                                    class="img-fluid" alt=""> --}}
+                    <img src="{{ asset('assets/images/00-hp/in_pic05.jpg') }}" class="img-fluid" alt="">
                 </div>
 
             </div>
@@ -126,20 +177,33 @@
                             麗晶品櫥活動期間限定特惠，<br>
                             與您一起實現理想廚房空間。
                         </p>
-                        <a href="{{ route('activity') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View More</a>
+                        <a href="{{ route('activity') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View
+                            More</a>
                     </div>
                 </div>
                 <div class="col-lg-9 d-block d-lg-flex justify-content-around mt-lg-0">
                     <div class="hp-activity-box mr-lg-3">
                         <div class="hab-content1 mb-5">
-                            <p class="hp-activity-date text-a7 mb-0">2024.11.22</p>
-                            <p class="hp-activity-category text-e9 mb-0">・訊息分類</p>
-                            <h4 class="text-caa883 ">網站正式啟用</h4>
+                            <p class="hp-activity-date text-a7 mb-0">
+                                {{ \Carbon\Carbon::parse($activities[0]->created_at ?? new DateTime())->format('Y.m.d') }}
+                            </p>
+                            <a
+                                href="{{ route('activity', ['classification_id' => $activities[0]->classification_id ?? '']) }}">
+                                <p class="hp-activity-category text-e9 mb-0">
+                                    ・{{ \App\Models\Admin\Classification::find($activities[0]->calssification_id ?? '')->name ?? '未分類' }}
+                                </p>
+                            </a>
+                            <a href="{{ route('activity-details-mock') }}">
+                                <h4 class="text-caa883 ">{{ $activities[0]->title ?? '網站正式啟用' }}</h4>
+                            </a>
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="javascript:void(0);" class="text-a-more">MORE →</a>
-                            <img src="{{asset('assets/images/00-hp/in_pic06.jpg')}}" class="img-fluid" alt="">
+                            <a href="{{ route('activity-details-mock') }}" class="text-a-more">MORE →</a>
+                            <a href="{{ route('activity-details-mock') }}">
+                                <img src="{{ asset('assets/images/00-hp/in_pic06.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </a>
                         </div>
                     </div>
 
@@ -147,14 +211,26 @@
 
                     <div class="hp-activity-box ml-lg-3">
                         <div class="hab-content1 mb-5">
-                            <p class="hp-activity-date text-a7 mb-0">2024.11.22</p>
-                            <p class="hp-activity-category text-e9 mb-0">・訊息分類</p>
-                            <h4 class="text-caa883 ">網站正式啟用</h4>
+                            <p class="hp-activity-date text-a7 mb-0">
+                                {{ \Carbon\Carbon::parse($activities[1]->created_at ?? new DateTime())->format('Y.m.d') }}
+                            </p>
+                            <a
+                                href="{{ route('activity', ['classification_id' => $activities[1]->classification_id ?? '']) }}">
+                                <p class="hp-activity-category text-e9 mb-0">
+                                    ・{{ \App\Models\Admin\Classification::find($activities[1]->calssification_id ?? '')->name ?? '未分類' }}
+                                </p>
+                            </a>
+                            <a href="{{ route('activity-details-mock') }}">
+                                <h4 class="text-caa883 ">{{ $activities[0]->title ?? '網站正式啟用' }}</h4>
+                            </a>
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="javascript:void(0);" class="text-a-more">MORE →</a>
-                            <img src="{{asset('assets/images/00-hp/in_pic07.jpg')}}" class="img-fluid" alt="">
+                            <a href="{{ route('activity-details-mock') }}" class="text-a-more">MORE →</a>
+                            <a href="{{ route('activity-details-mock') }}">
+                                <img src="{{ asset('assets/images/00-hp/in_pic07.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </a>
                         </div>
                     </div>
 
@@ -165,7 +241,8 @@
                             麗晶品櫥活動期間限定特惠，<br>
                             與您一起實現理想廚房空間。
                         </p>
-                        <a href="{{ route('activity') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View More</a>
+                        <a href="{{ route('activity') }}" class="btn-more"><span class="more-arrow mr-3">→</span>View
+                            More</a>
                     </div>
                 </div>
             </div>
@@ -175,39 +252,38 @@
     <div class="container-xxl">
         <div class="container-fluid m-0 p-0">
             <div class="row px-0 mx-0" id="hp-contact">
-                <div class="col-lg-6 p-0 bg-0a15 d-flex justify-content-lg-around justify-content-between align-items-center px-lg-auto px-3">
-                    <div class="hp-contact-content">
-                        <h3 class="text-e9">Store</h3>
-                        <p class="text-e9 font-weight-light">
-                            門市據點
-                        </p>
-                    </div>
+                <div class="col-lg-6 p-0 bg-0a15  px-lg-auto px-3">
+                    <a href="{{ route('stores') }}"
+                        class="w-100 h-100 d-flex justify-content-lg-around justify-content-between align-items-center hp-contact-link">
+                        <div class="hp-contact-content">
+                            <h3 class="text-e9">Store</h3>
+                            <p class="text-e9 font-weight-light">
+                                門市據點
+                            </p>
+                        </div>
 
-                    <div>
-                        <a href="{{ route('stores') }}">
-                            <img src="{{asset('assets/images/00-hp/bu_arrow.png')}}"
-                            onmouseover="this.src='{{asset('assets/images/00-hp/bu_arrow_rollin.png')}}'"
-                            onmouseout="this.src='{{asset('assets/images/00-hp/bu_arrow.png')}}'"
-                            class="img-fluid" alt="">
-                        </a>
-                    </div>
+                        <div>
+                            <img src="{{ asset('assets/images/00-hp/bu_arrow.png') }}" class="img-fluid hp-contact-arrow"
+                                alt="">
+                        </div>
+                    </a>
                 </div>
-                <div class="col-lg-6 p-0 bg-0a15 d-flex justify-content-lg-around justify-content-between align-items-center px-lg-auto px-3">
-                    <div class="hp-contact-content">
-                        <h3 class="text-e9">Contact</h3>
-                        <p class="text-e9 font-weight-light">
-                            聯絡我們
-                        </p>
-                    </div>
+                <div class="col-lg-6 p-0 bg-0a15 px-lg-auto px-3">
+                    <a href="{{ route('contact') }}"
+                        class="w-100 h-100 d-flex justify-content-lg-around justify-content-between align-items-center hp-contact-link">
+                        <div class="hp-contact-content">
+                            <h3 class="text-e9">Contact</h3>
+                            <p class="text-e9 font-weight-light">
+                                聯絡我們
+                            </p>
+                        </div>
 
-                    <div>
-                        <a href="{{ route('contact') }}">
-                            <img src="{{asset('assets/images/00-hp/bu_arrow.png')}}"
-                            onmouseover="this.src='{{asset('assets/images/00-hp/bu_arrow_rollin.png')}}'"
-                            onmouseout="this.src='{{asset('assets/images/00-hp/bu_arrow.png')}}'"
-                            class="img-fluid" alt="">
-                        </a>
-                    </div>
+                        <div>
+
+                            <img src="{{ asset('assets/images/00-hp/bu_arrow.png') }}" class="img-fluid hp-contact-arrow"
+                                alt="">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

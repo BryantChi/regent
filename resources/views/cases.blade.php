@@ -73,7 +73,7 @@
                             </div>
                             <div class="col-lg-6 align-self-center mb-lg-0 mb-3 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}">
                                 <a href="{{ route('cases', ['category_id' => $case->category_id]) }}">
-                                    <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">
+                                    <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                                         {{ \App\Models\Admin\Category::find($case->category_id)->name }}</h6>
                                 </a>
                                 <a
@@ -83,13 +83,13 @@
 
                                 @php
                                     // 移除圖片標籤
-                                    $cleanContent = preg_replace('/<img[^>]*>/i', '', $comtent ?? '');
+                                    $cleanContent = preg_replace('/<img[^>]*>/i', '', $case->content ?? '');
                                     // 移除其他 HTML 標籤
                                     $cleanText = strip_tags($cleanContent);
                                     // 截取前100字（處理UTF-8中文）
                                     $preview = mb_substr($cleanText, 0, 100);
                                 @endphp
-                                <div class="text-e9 font-weight-light multiline-ellipsis-4">
+                                <div class="text-ac font-weight-light multiline-ellipsis-4">
                                     {!! $preview ?? '' !!}
                                 </div>
                                 <a href="{{ route('cases-details', ['id' => $case->id, 'category_id' => request('category_id')]) }}"

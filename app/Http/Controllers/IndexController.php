@@ -14,11 +14,11 @@ class IndexController extends Controller
     public function index()
     {
         $seoInfo = SeoSettingRepository::getInfo('/*');
-        $cases = CaseInfo::orderBy('created_at', 'desc')->limit(6)->get();
+        $cases = CaseInfo::orderBy('created_at', 'desc')->limit(2)->get();
         $activity = ActivityInfo::orderBy('created_at', 'desc')->limit(2)->get();
         return view('index')
             ->with('seoInfo', $seoInfo)
             ->with('cases', $cases)
-            ->with('activity', $activity);
+            ->with('activities', $activity);
     }
 }

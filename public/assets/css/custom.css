@@ -1252,3 +1252,13 @@ select option {
 .cases-bg {
     background: linear-gradient(to bottom, #0d0d0d, #232323) !important;
 }
+
+.hp-contact-link .hp-contact-arrow {
+    content: url('../images/00-hp/bu_arrow.png');
+    transition: 0.3s;
+}
+
+/* hover 時換圖片 */
+.hp-contact-link:hover .hp-contact-arrow {
+    content: url('../images/00-hp/bu_arrow_rollin.png');
+}

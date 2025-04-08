@@ -1,7 +1,7 @@
 @extends('layouts_main.master')
 
 @section('content')
-    <div class="container-xxl py-5 cases-bg bg-23">
+    <div class="container-xxl py-5 cases-bg">
 
         <div class="container-fluid px-md-5">
             <div class="row justity-content-center mx-lg-5" id="cases">

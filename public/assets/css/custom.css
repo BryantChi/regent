@@ -588,7 +588,7 @@ p {
     border: 2px solid transparent;
     /* border-image: linear-gradient(35deg, #f6dfbc, #c09c70, #d5b58a, #b89869) 1; */
     background:
-        linear-gradient(72deg, #292a2b, #0d0d0d) padding-box, /* 內部背景 */
+        linear-gradient(72deg, #0d0d0d, #292a2b) padding-box, /* 內部背景 */
         linear-gradient(35deg, #f6dfbc, #c09c70, #d5b58a, #b89869) border-box; /* 邊框漸層 */
     background-clip: padding-box, border-box;
     border-radius: 30px;

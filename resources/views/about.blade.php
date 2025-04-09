@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row justity-content-center" id="about">
                 <div class="col-12 mb-4">
-                    <div class="pg-title-section text-center">
+                    <div class="pg-title-section text-center" data-aos="fade-up" data-aos-delay="200">
                         <h2 class="text-e9">關於麗晶</h2>
                         <p class="text-997d53 font-weight-light">
                             About Us
@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="col-lg-6 pr-lg-5 pr-auto d-flex flex-column justify-content-between">
-                    <div class="about-content mb-lg-4 mb-3">
+                    <div class="about-content mb-lg-4 mb-3" data-aos="fade-up" data-aos-delay="200">
                         <h5 class="text-caa883 mb-4">麗晶 | 品櫥 &emsp; Regent living studio</h5>
 
                         <p class="text-e9 mb-4 font-weight-light">
@@ -24,14 +24,14 @@
                         </p>
                     </div>
 
-                    <div class="about-slogan mt-lg-3 mt-1">
+                    <div class="about-slogan mt-lg-3 mt-1" data-aos="fade-up" data-aos-delay="200">
                         <h4 class="text-d5 font-weight-light">Create a high-quality kitchen for you.</h4>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
                     <picture>
                         <source media="(max-width: 768px)" srcset="{{asset('assets/images/01/01pic1_640.jpg')}}">
-                        <img src="{{asset('assets/images/01/01pic1_840.jpg')}}" class="img-fluid" alt="">
+                        <img src="{{asset('assets/images/01/01pic1_840.jpg')}}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
                     </picture>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     <picture>
                         <source media="(max-width: 767px)" srcset="{{asset('assets/images/01/01pic2_640.jpg')}}">
                         <source media="(max-width: 1023px)" srcset="{{asset('assets/images/01/01pic2_1024.jpg')}} ">
-                        <img src="{{asset('assets/images/01/01pic2_1608.jpg')}}" class="img-fluid" alt="">
+                        <img src="{{asset('assets/images/01/01pic2_1608.jpg')}}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
                     </picture>
                 </div>
             </div>
@@ -63,10 +63,10 @@
 
         <div class="container">
             <div class="row" id="about2">
-                <div class="col-lg-5 mb-lg-0 mb-3 text-center">
+                <div class="col-lg-5 mb-lg-0 mb-3 text-center" data-aos="zoom-in" data-aos-delay="200">
                     <img src="{{asset('assets/images/01/01pic3.jpg')}}" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
 
                     <div class="about-content mb-lg-4 mb-3">
                         <h5 class="text-caa883 mb-3">核心價值</h5>

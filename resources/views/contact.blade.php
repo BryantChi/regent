@@ -6,7 +6,7 @@
 
             <div class="row justity-content-center" id="contact">
                 <div class="col-12 mb-4">
-                    <div class="pg-title-section text-center">
+                    <div class="pg-title-section text-center" data-aos="fade-up" data-aos-delay="200">
                         <h2 class="text-e9">聯絡我們</h2>
                         <p class="text-997d53 font-weight-light mb-4">
                             Contact
@@ -25,7 +25,7 @@
                         <source srcset="{{ asset('assets/images/04/04pic_flat.jpg') }}" media="(max-width: 1023px)"
                             type="image/jpeg">
                         <img src="{{ asset('assets/images/04/04pic_com.jpg') }}" class="img-fluid contact-img"
-                            alt="">
+                            alt="" data-aos="fade-right" data-aos-delay="200">
                     </picture>
                 </div>
                 <div class="col-lg-7 mb-4">
@@ -47,9 +47,9 @@
                         </div>
                     @endif
 
-                    <h5 class="mb-4 text-997d53"><span class="required"></span>為必填或必選欄位</h5>
+                    <h5 class="mb-4 text-997d53" data-aos="fade-up" data-aos-delay="200"><span class="required"></span>為必填或必選欄位</h5>
 
-                    <form method="POST" action="{{ route('requirements.store') }}" id="requirements-form">
+                    <form method="POST" action="{{ route('requirements.store') }}" id="requirements-form" data-aos="fade-up" data-aos-delay="200">
                         {{-- CSRF Token --}}
                         @csrf
 
@@ -116,7 +116,7 @@
                     </form>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="200">
                     <p class="text-e9 font-weight-light mb-0 text-center">
                         無論您正在規劃全新的廚房空間，或是想提升現有的廚房功能與美感，麗晶品櫥的專業團隊都隨時準備為您提供協助與建議。
                     </p>

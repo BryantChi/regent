@@ -1,4 +1,4 @@
-<div class="footer-img">
+<div class="footer-img wow" data-aos="fade" data-aos-delay="200">
     <picture>
         <source media="(max-width: 768px)" srcset="{{asset('assets/images/00-hp/bottom_banner_750.jpg')}}">
         <source media="(max-width: 1024px)" srcset="{{asset('assets/images/00-hp/bottom_banner_1024.jpg')}}">
@@ -11,14 +11,14 @@
     <div class="container-fluid">
         <div class="row justify-content-around px-lg-5 px-3">
 
-            <div class="col-lg-auto mb-3">
-                <a href="javascript:void(0)">
+            <div class="col-lg-auto mb-3 wow" data-aos="fade-up" data-aos-delay="200">
+                <a href="{{route('index')}}">
                     <img src="{{asset('assets/images/00-hp/footer_logo.svg')}}" class="img-fluid footer-logo" alt="">
                 </a>
 
             </div>
 
-            <div class="col-lg-auto mb-3">
+            <div class="col-lg-auto mb-3 wow" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-e9 mb-0">中華店</p>
                 <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Tel | </span>03-8321000
                 </p>
@@ -28,7 +28,7 @@
                     </span>花蓮市中華路331號</p>
             </div>
 
-            <div class="col-lg-auto mb-3">
+            <div class="col-lg-auto mb-3 wow" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-e9 mb-0">林森店</p>
                 <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Tel | </span>03-8322852
                 </p>
@@ -38,7 +38,7 @@
                 </p>
             </div>
 
-            <div class="col-lg-auto mb-3">
+            <div class="col-lg-auto mb-3 wow" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-e9 mb-0 font-weight-light"><span class="text-997d53">Line Id | </span>@xyn0189f
                 </p>
                 <a href="https://line.me/R/ti/p/@xyn0189f" target="_blank"><img src="{{asset('assets/images/00-hp/footer_qr.svg')}}" class="img-fluid my-2"
@@ -56,7 +56,7 @@
                 </p>
             </div>
 
-            <div class="col-lg-auto mb-3">
+            <div class="col-lg-auto mb-3 wow" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-997d53">Quick Links</p>
                 <p class="mb-2"><a href="{{route('about')}}" class="text-e9">關於麗晶</a></p>
                 <p class="mb-2"><a href="{{route('cases')}}" class="text-e9">案例分享</a></p>

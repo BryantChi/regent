@@ -28,7 +28,7 @@
                         </div>
                     </form> --}}
 
-                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2">
+                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2" data-aos="fade-up" data-aos-delay="200">
                         <h5 class="mb-0 text-white text-uppercase fw-bold">訊息分類</h5>
                         <span class="text-white c-down">
                             <i class="fas fa-sort-down"></i>
@@ -37,7 +37,7 @@
                             <i class="fas fa-sort-up"></i>
                         </span>
                     </div>
-                    <div class="activity-category">
+                    <div class="activity-category" data-aos="fade-up" data-aos-delay="200">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link {{ empty(request('classification_id')) ? 'active' : '' }}"
@@ -60,7 +60,7 @@
                 <div class="col-lg-10 mt-lg-0 mt-4">
                     <div class="row">
                         <div class="col-12 mb-4">
-                            <div class="activity-title text-center">
+                            <div class="activity-title text-center" data-aos="fade-up" data-aos-delay="200">
                                 <h2 class="text-cba783 font-weight-normal w-100">{{ $activity->title ?? '網站正式啟用' }}</h2>
                                 <p class="text-e9 font-weight-light mb-0" style="font-size: 14px;">
                                     {{ \Carbon\Carbon::parse($activity->created_at ?? '')->format('Y.m.d') ?? '2024.12.15' }} ・
@@ -70,13 +70,13 @@
                         </div>
 
                         <div class="col-12">
-                            <div class="activity-content">
+                            <div class="activity-content" data-aos="fade-up" data-aos-delay="200">
                                 @if ($activity->content ?? null != null)
-                                    {!! $activity->content ?? '這是一個活動訊息的描述，這裡可以放一些關於這個活動訊息的詳細信息。' !!}
+                                    {!! $activity->content ?? '' !!}
                                 @endif
                             </div>
 
-                            <div class="activity-content">
+                            {{-- <div class="activity-content">
                                 <h5>麗晶品櫥官方網站正式上線！</h5>
                                 <p>
                                     我們很高興向您宣布，麗晶品櫥官方網站正式啟用！為了讓每位關注我們的顧客與朋友更方便地了解我們的產品與服務，我們傾注心力打造了這個專屬平台，為您帶來全新的數位體驗。
@@ -103,11 +103,11 @@
                                     歡迎造訪我們的官方網站，探索更多驚喜與靈感。感謝您對麗晶品廚的支持與信任，我們期待與您攜手，共創更美好的廚房與居家生活！
                                 </p>
 
-                            </div>
+                            </div> --}}
 
                         </div>
 
-                        <div class="col-12 text-center border-top-997d53 py-3 mt-3">
+                        <div class="col-12 text-center border-top-997d53 py-3 mt-3" data-aos="fade-up" data-aos-delay="200">
                             <a href="{{ route('activity') }}" class="btn-back"><span class="back-arrow mr-3">←</span>BACK
                                 返回列表</a>
                         </div>

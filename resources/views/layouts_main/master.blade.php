@@ -42,7 +42,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="{{asset('assets/css/aos.css')}}">
+    {{-- animate cdn --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+
+    {{-- swiper cdn --}}
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> --}}
+
+    {{-- aos cdn --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    {{-- aos local --}}
+    {{-- <link rel="stylesheet" href="{{asset('assets/css/aos.css')}}"> --}}
 
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}?v={{ time() }}">
 
@@ -81,7 +91,7 @@
         <img src="{{asset('assets/images/00-hp/top.png')}}" class="img-fluid" style="width: 50px;" alt="">
     </a>
 
-    <div class="d-none d-md-block social-links-btn social-style">
+    <div class="d-none d-md-block social-links-btn social-style" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
         <a href="https://line.me/R/ti/p/@xyn0189f" target="_blank" class="d-none d-md-block"><img src="{{asset('assets/images/00-hp/left_line.png')}}"
                 class="img-fluid left-line-img" width="32" alt=""></a>
         <div class="social-line mx-auto my-22"></div>
@@ -129,7 +139,14 @@
     <script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
     <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('assets/js/bootstrap-datepicker.min.js')}}"></script>
-    <script src="{{asset('assets/js/aos.js')}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    {{-- aos.js cdn --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    {{-- aos.js local --}}
+    {{-- <script src="{{asset('assets/js/aos.js')}}"></script> --}}
 
     <script src="{{asset('assets/js/main.js')}}?v={{time()}}"></script>
 
@@ -139,6 +156,7 @@
     @stack('page_scripts')
 
     <script>
+        new WOW().init();
         $(document).ready(function () {
         });
     </script>

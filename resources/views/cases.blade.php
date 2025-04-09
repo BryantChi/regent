@@ -18,7 +18,7 @@
 
             <div class="row mx-lg-5">
                 <div class="col-lg-2">
-                    <form method="GET" action="{{ route('cases') }}">
+                    <form method="GET" action="{{ route('cases') }}" data-aos="fade" data-aos-delay="200">
                         <div class="form-group position-relative">
                             <input type="text" name="search" class="form-control cases-search" placeholder="搜尋案例"
                                 value="{{ request('search') }}">
@@ -28,7 +28,7 @@
                         </div>
                     </form>
 
-                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2">
+                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2" data-aos="fade-up" data-aos-delay="200">
                         <h5 class="mb-0 text-white text-uppercase fw-bold">案例分類</h5>
                         <span class="text-white c-down">
                             <i class="fas fa-sort-down"></i>
@@ -37,7 +37,7 @@
                             <i class="fas fa-sort-up"></i>
                         </span>
                     </div>
-                    <div class="cases-category">
+                    <div class="cases-category" data-aos="fade-up" data-aos-delay="200">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link {{ empty(request('category_id')) ? 'active' : '' }}"
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-lg-10">
-                    <div class="col-12 d-flex justify-content-end">
+                    <div class="col-12 d-flex justify-content-end" data-aos="fade-up" data-aos-delay="200">
                         <p class="text-997d53 font-weight-light" style="font-size: 14px;">共 {{ $cases->total() ?? 0 }} 件案例
                         </p>
                     </div>
@@ -67,11 +67,11 @@
 
                     @foreach ($cases ?? [] as $key => $case)
                         <div class="row mb-4">
-                            <div class="col-lg-6 align-self-center mb-lg-0 mb-4 {{ $key % 2 == 0 ? '' : 'order-lg-2 order-1' }}">
+                            <div class="col-lg-6 align-self-center mb-lg-0 mb-4 {{ $key % 2 == 0 ? '' : 'order-lg-2 order-1' }}" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $case->image }}"
                                     class="img-fluid" alt="">
                             </div>
-                            <div class="col-lg-6 align-self-center mb-lg-0 mb-3 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}">
+                            <div class="col-lg-6 align-self-center mb-lg-0 mb-3 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}" data-aos="fade-up" data-aos-delay="200">
                                 <a href="{{ route('cases', ['category_id' => $case->category_id]) }}">
                                     <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                                         {{ \App\Models\Admin\Category::find($case->category_id)->name }}</h6>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="row mb-4">
+                    {{-- <div class="row mb-4">
 
                         <div class="col-lg-6 align-self-center mb-lg-0 mb-4">
                             <a href="{{ route('cases-details-mock')}}">
@@ -138,7 +138,7 @@
                             </p>
                             <a href="javascript:void(0);" class="text-a-more">MORE →</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

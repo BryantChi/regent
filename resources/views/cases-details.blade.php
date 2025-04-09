@@ -18,7 +18,7 @@
 
             <div class="row mx-lg-5">
                 <div class="col-lg-2">
-                    <form method="GET" action="{{ route('cases') }}">
+                    <form method="GET" action="{{ route('cases') }}" data-aos="fade" data-aos-delay="200">
                         <div class="form-group position-relative">
                             <input type="text" name="search" class="form-control cases-search" placeholder="搜尋案例"
                                 value="{{ request('search') }}">
@@ -28,7 +28,7 @@
                         </div>
                     </form>
 
-                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2">
+                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2" data-aos="fade-up" data-aos-delay="200">
                         <h5 class="mb-0 text-white text-uppercase fw-bold">案例分類</h5>
                         <span class="text-white c-down">
                             <i class="fas fa-sort-down"></i>
@@ -37,7 +37,7 @@
                             <i class="fas fa-sort-up"></i>
                         </span>
                     </div>
-                    <div class="cases-category">
+                    <div class="cases-category" data-aos="fade-up" data-aos-delay="200">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link {{ empty(request('category_id')) ? 'active' : '' }}"
@@ -61,7 +61,7 @@
                 <div class="col-lg-10 mt-lg-0 mt-4">
                     <div class="row">
                         <div class="col-12 mb-4">
-                            <div class="cases-title text-center">
+                            <div class="cases-title text-center" data-aos="fade-up" data-aos-delay="200">
                                 <h3 class="text-e9">{{ $case->title ?? '陳府別墅' }}</h3>
                                 <p class="text-997d53 font-weight-light mb-0" style="font-size: 13px;">
                                     {{ \Carbon\Carbon::parse($case->created_at ?? '')->format('Y-m-d') ?? '2024-12-15' }} |
@@ -71,12 +71,12 @@
                         </div>
 
                         <div class="col-12">
-                            <div class="cases-content text-e9 font-weight-light">
+                            <div class="cases-content text-e9 font-weight-light" data-aos="fade-up" data-aos-delay="200">
                                 @if ($case->content ?? null != null)
-                                    {!! $case->content ?? '這是一個案例的描述，這裡可以放一些關於這個案例的詳細信息。' !!}
+                                    {!! $case->content ?? '' !!}
                                 @endif
 
-                                <div class="row">
+                                {{-- <div class="row">
                                     <div class="col-12 mb-4">
                                         <img src="{{ asset('assets/images/02/02_inside_pic1.jpg') }}" class="img-fluid"
                                             alt="">
@@ -132,11 +132,11 @@
                                         </p>
                                     </div>
 
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 
-                        <div class="col-12 text-center border-top-997d53 py-3 mt-3">
+                        <div class="col-12 text-center border-top-997d53 py-3 mt-3" data-aos="fade-up" data-aos-delay="200">
                             <a href="{{ route('cases') }}" class="btn-back"><span class="back-arrow mr-3">←</span>BACK
                                 返回列表</a>
                         </div>

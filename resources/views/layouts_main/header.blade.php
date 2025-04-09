@@ -10,7 +10,7 @@
 
 
 
-<header class="site-navbar py-1 fixed-top site-navbar" role="banner">
+<header class="site-navbar py-1 fixed-top site-navbar" role="banner" data-aos="fade-down" data-aos-delay="200">
 
     <div class="container-fluid">
         <div class="row justify-content-between align-items-center px-lg-5">

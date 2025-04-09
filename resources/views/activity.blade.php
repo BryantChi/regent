@@ -28,7 +28,7 @@
                         </div>
                     </form> --}}
 
-                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2">
+                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2" data-aos="fade-up" data-aos-delay="200">
                         <h5 class="mb-0 text-white text-uppercase fw-bold">訊息分類</h5>
                         <span class="text-white c-down">
                             <i class="fas fa-sort-down"></i>
@@ -37,7 +37,7 @@
                             <i class="fas fa-sort-up"></i>
                         </span>
                     </div>
-                    <div class="activity-category">
+                    <div class="activity-category" data-aos="fade-up" data-aos-delay="200">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link {{ empty(request('classification_id')) ? 'active' : '' }}"
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col-lg-10">
-                    <div class="col-12 d-flex justify-content-end">
+                    <div class="col-12 d-flex justify-content-end" data-aos="fade-up" data-aos-delay="200">
                         <p class="text-997d53 font-weight-light" style="font-size: 14px;">共 {{ 0 }} 則訊息
                         </p>
                     </div>
@@ -66,23 +66,23 @@
                     @php
                     if (isset($activities) && count($activities) > 0) {
                         $chunkedData = $activities->chunk(3);
-                    } else {
-                        $activity = [
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic06.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                            ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
-                        ];
-                        $chunkedData = array_chunk($activity ?? [], 3);
                     }
-
+                    //  else {
+                    //     $activity = [
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic06.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //         ['date' => '2024.11.22', 'category' => '訊息分類', 'title' => '網站正式啟用', 'image' => 'in_pic07.jpg'],
+                    //     ];
+                    //     $chunkedData = array_chunk($activity ?? [], 3);
+                    // }
 
                     @endphp
 
@@ -92,7 +92,7 @@
                         @foreach ($row as $colIndex => $activity)
                         <div class="col-lg-4 d-flex align-items-center pr-lg-3 pb-lg-auto py-lg-auto py-3 {{ $colIndex < count($row) - 1 ? 'border-end' : '' }}">
                             <div class="hp-activity-box m-lg-3w">
-                                <div class="hab-content1 mb-5">
+                                <div class="hab-content1 mb-5" data-aos="fade-up" data-aos-delay="200">
                                     <p class="hp-activity-date text-a7 mb-0">{{ \Carbon\Carbon::parse($activity->created_at ?? new DateTime())->format('Y.m.d')}}</p>
                                     <a href="{{ route('activity', ['classification_id' => $activity->classification_id ?? '']) }}">
                                         <p class="hp-activity-category text-e9 mb-0">・{{ \App\Models\Admin\Classification::find($activity->calssification_id ?? '')->name ?? '未分類' }}</p>
@@ -104,11 +104,11 @@
                                 </div>
 
                                 <div class="hab-content02 d-flex flex-column">
-                                    <a href="javascript:void(0);" class="text-a-more">MORE →</a>
-                                    {{-- <a href="{{ route('activity-details', ['id' => $course->id, 'classification_id' => request('classification_id')]) }}"> --}}
-                                    <a href="{{ route('activity-details-mock')}}">
-                                        {{-- <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $activity->image }}" class="img-fluid" alt=""> --}}
-                                        <img src="{{asset('assets/images/00-hp/in_pic06.jpg')}}" class="img-fluid" alt="">
+                                    <a href="javascript:void(0);" class="text-a-more" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                                    <a href="{{ route('activity-details', ['id' => $activity->id ?? 0, 'classification_id' => request('classification_id')]) }}" data-aos="zoom-in" data-aos-delay="200">
+                                    {{-- <a href="{{ route('activity-details-mock')}}" data-aos="zoom-in" data-aos-delay="200"> --}}
+                                        <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $activity->image ?? '' }}" class="img-fluid" alt="">
+                                        {{-- <img src="{{asset('assets/images/00-hp/in_pic06.jpg')}}" class="img-fluid" alt=""> --}}
                                     </a>
                                 </div>
                             </div>

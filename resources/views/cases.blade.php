@@ -51,10 +51,10 @@
                                     </a>
                                 </li>
                             @endforeach
-                            <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">廚房設計</a></li>
+                            {{-- <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">廚房設計</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:void(0);">酒櫃設計</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:void(0);">系統櫥櫃</a></li>
-                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">系統浴櫃</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">系統浴櫃</a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     @foreach ($cases ?? [] as $key => $case)
                         <div class="row mb-4">
                             <div class="col-lg-6 align-self-center mb-lg-0 mb-4 {{ $key % 2 == 0 ? '' : 'order-lg-2 order-1' }}">
-                                <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . $case->image }}"
+                                <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $case->image }}"
                                     class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 align-self-center mb-lg-0 mb-3 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}">

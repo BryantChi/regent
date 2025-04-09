@@ -51,9 +51,9 @@
                                     </a>
                                 </li>
                             @endforeach
-                            <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">樣品出清</a></li>
+                            {{-- <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">樣品出清</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:void(0);">營業公告</a></li>
-                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">參展訊息</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">參展訊息</a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                                     <a href="javascript:void(0);" class="text-a-more">MORE →</a>
                                     {{-- <a href="{{ route('activity-details', ['id' => $course->id, 'classification_id' => request('classification_id')]) }}"> --}}
                                     <a href="{{ route('activity-details-mock')}}">
-                                        {{-- <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . $activity->image }}" class="img-fluid" alt=""> --}}
+                                        {{-- <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $activity->image }}" class="img-fluid" alt=""> --}}
                                         <img src="{{asset('assets/images/00-hp/in_pic06.jpg')}}" class="img-fluid" alt="">
                                     </a>
                                 </div>

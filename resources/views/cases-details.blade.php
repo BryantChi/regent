@@ -51,10 +51,10 @@
                                     </a>
                                 </li>
                             @endforeach
-                            <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">廚房設計</a></li>
+                            {{-- <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">廚房設計</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:void(0);">酒櫃設計</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:void(0);">系統櫥櫃</a></li>
-                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">系統浴櫃</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">系統浴櫃</a></li> --}}
                         </ul>
                     </div>
                 </div>

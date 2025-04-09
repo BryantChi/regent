@@ -66,7 +66,7 @@
             </div>
             <div class="row mb-3">
                 <div class="col-lg-7 align-self-center">
-                    {{-- <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . ($cases[0]->image ?? '') }}"
+                    {{-- <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[0]->image ?? '') }}"
                                     class="img-fluid" alt=""> --}}
                     <img src="{{ asset('assets/images/00-hp/in_pic04.jpg') }}" class="img-fluid" alt="">
                 </div>
@@ -139,7 +139,7 @@
                     <a href="javascript:void(0);" class="text-a-more">MORE →</a> --}}
                 </div>
                 <div class="col-lg-7 align-self-center">
-                    {{-- <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . ($cases[1]->image ?? '') }}"
+                    {{-- <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[1]->image ?? '') }}"
                                     class="img-fluid" alt=""> --}}
                     <img src="{{ asset('assets/images/00-hp/in_pic05.jpg') }}" class="img-fluid" alt="">
                 </div>

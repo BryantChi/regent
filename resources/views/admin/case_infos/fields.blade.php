@@ -28,7 +28,7 @@
     <div class="img-preview-cover mt-2">
         @if ($caseInfo->image ?? null)
             <p for="">預覽</p>
-            <img src="{{ env('APP_URL', 'https://regent.powerchi.com.tw') . '/uploads/' . $caseInfo->image }}"
+            <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $caseInfo->image }}"
                 style="max-width: 200px; max-height: 200px;">
         @endif
     </div>

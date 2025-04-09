@@ -51,9 +51,9 @@
                                     </a>
                                 </li>
                             @endforeach
-                            <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">樣品出清</a></li>
+                            {{-- <li class="nav-item"><a class="nav-link active" href="javascript:void(0);">樣品出清</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:void(0);">營業公告</a></li>
-                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">參展訊息</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">參展訊息</a></li> --}}
                         </ul>
                     </div>
                 </div>

@@ -24,7 +24,8 @@ class RequirementController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $requirements = $this->requirementRepository->paginate(10);
+        $requirements = $this->requirementRepository->all();
+        // $requirements = $this->requirementRepository->paginate(10);
 
         return view('admin.requirements.index')
             ->with('requirements', $requirements);

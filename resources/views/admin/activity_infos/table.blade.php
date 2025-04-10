@@ -12,7 +12,7 @@
                 @foreach ($activityInfos as $activityInfo)
                     <tr>
                         <td>{{ $activityInfo->title }}</td>
-                        <td>{{ $activityInfo->classification_id }}</td>
+                        <td>{{ \App\Models\Admin\Classification::find($activityInfo->classification_id)->name }}</td>
                         <td style="width: 120px">
                             {!! Form::open(['route' => ['admin.activityInfos.destroy', $activityInfo->id], 'method' => 'delete']) !!}
                             <div class='btn-group'>

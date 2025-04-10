@@ -74,12 +74,9 @@
                     <a href="{{ route('cases', ['category_id' => $cases[0]->category_id ?? '']) }}">
                         <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                             {{ \App\Models\Admin\Category::find($cases[0]->category_id ?? '')->name ?? '未分類' }}</h6>
-                        {{-- <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">酒櫃設計</h6> --}}
                     </a>
-                    <a href="{{ route('cases-details', ['id' => $cases[0]->id ?? 0, 'category_id' => request('category_id')]) }}">
-                    {{-- <a href="{{ route('cases-details-mock') }}"> --}}
+                    <a href="{{ route('cases-details', ['id' => $cases[0]->id ?? 0, 'category_id' => $cases[0]->category_id ?? '']) }}">
                         <h4 class="text-e9 mb-3">{{ $cases[0]->title ?? '陳府別墅' }}</h4>
-                        {{-- <h4 class="text-e9 mb-3">陳府別墅</h4> --}}
                     </a>
 
                     @php
@@ -93,13 +90,8 @@
                     <div class="text-ac font-weight-bold multiline-ellipsis-4 mb-3" style="font-weight: 600;">
                         {!! $preview ?? '' !!}
                     </div>
-                    <a href="{{ route('cases-details', ['id' => $cases[0]->id ?? 0, 'category_id' => request('category_id')]) }}"
-                    {{-- <a href="{{ route('cases-details-mock') }}" --}}
+                    <a href="{{ route('cases-details', ['id' => $cases[0]->id ?? 0, 'category_id' => $cases[0]->category_id ?? '']) }}"
                         class="text-a-more">MORE →</a>
-                    {{-- <p class="text-ac">
-                        紅酒櫃設計不只是簡單的收納，更是要在美觀與實用之間取得平衡。我們的設計師考量到每位顧客的空間需求和個人風格，從材質、色彩、到照明，每一個細節都精心打造，使紅酒櫃成為空間中的藝術品。透過環繞的燈光設計，紅酒櫃可以營造出高雅且舒適的氛圍，讓紅酒在合適的溫度和濕度下恆久保存。
-                    </p> --}}
-                    {{-- <a href="javascript:void(0);" class="text-a-more">MORE →</a> --}}
                 </div>
             </div>
 
@@ -109,13 +101,9 @@
                     <a href="{{ route('cases', ['category_id' => $cases[1]->category_id ?? '']) }}">
                         <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                             {{ \App\Models\Admin\Category::find($cases[1]->category_id ?? '')->name ?? '未分類' }}</h6>
-                        {{-- <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">廚房設計</h6> --}}
-                        {{-- <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #997d53;">廚房設計</h6> --}}
                     </a>
-                    <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => request('category_id')]) }}">
-                    {{-- <a href="{{ route('cases-details-mock') }}"> --}}
+                    <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => $cases[1]->category_id ?? '']) }}">
                         <h4 class="text-e9 mb-3">{{ $cases[1]->title ?? '張府私宅' }}</h4>
-                        {{-- <h4 class="text-e9 mb-3">張府私宅</h4> --}}
                     </a>
 
                     @php
@@ -130,13 +118,8 @@
                         {{-- <div class="text-ac font-weight-bold multiline-ellipsis-4 mb-2"> --}}
                         {!! $preview ?? '' !!}
                     </div>
-                    <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => request('category_id')]) }}"
-                    {{-- <a href="{{ route('cases-details-mock') }}" --}}
+                    <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => $cases[1]->category_id ?? '']) }}"
                         class="text-a-more">MORE →</a>
-                    {{-- <p>
-                        廚櫃的材質和色彩選擇也是設計中的重要一環。通過高品質的材質和多樣的色彩搭配，使廚房櫃體既耐用又富有質感。溫暖的木質面板、光滑的大理石檯面、以及內嵌的燈光設計，讓廚房既具現代感又充滿溫馨氛圍，成為家中最具吸引力的場所。
-                    </p>
-                    <a href="javascript:void(0);" class="text-a-more">MORE →</a> --}}
                 </div>
                 <div class="col-lg-7 align-self-center wow" data-aos="zoom-in" data-aos-delay="200">
                     <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[1]->image ?? '') }}"
@@ -190,18 +173,17 @@
                             <a
                                 href="{{ route('activity', ['classification_id' => $activities[0]->classification_id ?? '']) }}">
                                 <p class="hp-activity-category text-e9 mb-0">
-                                    ・{{ \App\Models\Admin\Classification::find($activities[0]->calssification_id ?? '')->name ?? '未分類' }}
+                                    ・{{ \App\Models\Admin\Classification::find($activities[0]->classification_id ?? '')->name ?? '未分類' }}
                                 </p>
                             </a>
-                            <a href="{{ route('activity-details-mock') }}">
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}">
                                 <h4 class="text-caa883 ">{{ $activities[0]->title ?? '網站正式啟用' }}</h4>
                             </a>
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="{{ route('activity-details', ['id' => $$activities[0]->id ?? 0, 'classification_id' => request('classification_id')]) }}" class="text-a-more wow" data-aos="fade-up" data-aos-delay="200">MORE →</a>
-                            <a href="{{ route('activity-details', ['id' => $$activities[0]->id ?? 0, 'classification_id' => request('classification_id')]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
-                            {{-- <a href="{{ route('activity-details-mock') }}" data-aos="fade-up" data-aos-delay="200"> --}}
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="text-a-more wow" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($activities[0]->image ?? '') }}" class="img-fluid" alt="">
                                 {{-- <img src="{{ asset('assets/images/00-hp/in_pic06.jpg') }}" class="img-fluid" alt=""> --}}
                             </a>
@@ -218,18 +200,17 @@
                             <a
                                 href="{{ route('activity', ['classification_id' => $activities[1]->classification_id ?? '']) }}">
                                 <p class="hp-activity-category text-e9 mb-0">
-                                    ・{{ \App\Models\Admin\Classification::find($activities[1]->calssification_id ?? '')->name ?? '未分類' }}
+                                    ・{{ \App\Models\Admin\Classification::find($activities[1]->classification_id ?? '')->name ?? '未分類' }}
                                 </p>
                             </a>
-                            <a href="{{ route('activity-details-mock') }}">
-                                <h4 class="text-caa883 ">{{ $activities[0]->title ?? '網站正式啟用' }}</h4>
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}">
+                                <h4 class="text-caa883 ">{{ $activities[1]->title ?? '網站正式啟用' }}</h4>
                             </a>
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="{{ route('activity-details', ['id' => $$activities[1]->id ?? 0, 'classification_id' => request('classification_id')]) }}" class="text-a-more wow" data-aos="fade-up" data-aos-delay="200">MORE →</a>
-                            <a href="{{ route('activity-details', ['id' => $$activities[1]->id ?? 0, 'classification_id' => request('classification_id')]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
-                            {{-- <a href="{{ route('activity-details-mock') }}" data-aos="fade-up" data-aos-delay="200"> --}}
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="text-a-more wow" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($activities[1]->image ?? '') }}" class="img-fluid" alt="">
                                 {{-- <img src="{{ asset('assets/images/00-hp/in_pic07.jpg') }}" class="img-fluid" alt=""> --}}
                             </a>

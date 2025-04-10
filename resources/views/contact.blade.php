@@ -52,7 +52,7 @@
                     <form method="POST" action="{{ route('requirements.store') }}" id="requirements-form" data-aos="fade-up" data-aos-delay="200">
                         {{-- CSRF Token --}}
                         @csrf
-
+                        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <div class="form-group form-section">
                             <label class="text-e9 required" for="type">諮詢類型：</label>
                             <select id="type" name="type" class="custom-select">

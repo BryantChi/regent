@@ -65,7 +65,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 //需求表單頁面送出
-Route::post('/requirement-form', [RequirementController::class, 'store'])->name('requirements.store');
+Route::post('/requirement-form', [RequirementController::class, 'store'])->middleware('throttle:5,1')->name('requirements.store');
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

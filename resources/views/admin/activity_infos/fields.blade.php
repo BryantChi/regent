@@ -26,9 +26,9 @@
         <label class="custom-file-label" for="image">Choose file</label>
     </div>
     <div class="img-preview-cover mt-2">
-        @if ($caseInfo->image ?? null)
+        @if ($activityInfo->image ?? null)
             <p for="">預覽</p>
-            <img src="{{ env('APP_URL', 'https://norah.tw') . '/uploads/' . $caseInfo->image }}"
+            <img src="{{ env('APP_URL', 'https://norah.tw') . '/uploads/' . $activityInfo->image }}"
                 style="max-width: 200px; max-height: 200px;">
         @endif
     </div>

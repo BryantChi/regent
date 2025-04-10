@@ -12,6 +12,10 @@ class RequirementController extends Controller
     // 需求表單頁面送出
     public function store(CreateRequirementRequest $request)
     {
+        if ($request->filled('website')) {
+            abort(403, '非法請求'); // 機器人填了 honeypot
+        }
+
         $input = $request->all();
 
         // 儲存需求表單資料

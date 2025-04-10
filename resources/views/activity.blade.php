@@ -91,14 +91,13 @@
 
                         @foreach ($row as $colIndex => $activity)
                         <div class="col-lg-4 d-flex align-items-center pr-lg-3 pb-lg-auto py-lg-auto py-3 {{ $colIndex < count($row) - 1 ? 'border-end' : '' }}">
-                            <div class="hp-activity-box m-lg-3w">
+                            <div class="hp-activity-box m-lg-3w w-100">
                                 <div class="hab-content1 mb-5" data-aos="fade-up" data-aos-delay="200">
                                     <p class="hp-activity-date text-a7 mb-0">{{ \Carbon\Carbon::parse($activity->created_at ?? new DateTime())->format('Y.m.d')}}</p>
                                     <a href="{{ route('activity', ['classification_id' => $activity->classification_id ?? '']) }}">
-                                        <p class="hp-activity-category text-e9 mb-0">・{{ \App\Models\Admin\Classification::find($activity->calssification_id ?? '')->name ?? '未分類' }}</p>
+                                        <p class="hp-activity-category text-e9 mb-0">・{{ \App\Models\Admin\Classification::find($activity->classification_id ?? '')->name ?? '未分類' }}</p>
                                     </a>
-                                    {{-- <a href="{{ route('activity-details', ['id' => $course->id, 'classification_id' => request('classification_id')]) }}"> --}}
-                                    <a href="{{ route('activity-details-mock')}}">
+                                    <a href="{{ route('activity-details', ['id' => $activity->id, 'classification_id' => request('classification_id')]) }}">
                                         <h4 class="text-caa883 multiline-ellipsis-1">{{ $activity->title ?? '網站正式啟用' }}</h4>
                                     </a>
                                 </div>
@@ -106,7 +105,6 @@
                                 <div class="hab-content02 d-flex flex-column">
                                     <a href="javascript:void(0);" class="text-a-more" data-aos="fade-up" data-aos-delay="200">MORE →</a>
                                     <a href="{{ route('activity-details', ['id' => $activity->id ?? 0, 'classification_id' => request('classification_id')]) }}" data-aos="zoom-in" data-aos-delay="200">
-                                    {{-- <a href="{{ route('activity-details-mock')}}" data-aos="zoom-in" data-aos-delay="200"> --}}
                                         <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $activity->image ?? '' }}" class="img-fluid" alt="">
                                         {{-- <img src="{{asset('assets/images/00-hp/in_pic06.jpg')}}" class="img-fluid" alt=""> --}}
                                     </a>

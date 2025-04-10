@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-10">
                     <div class="col-12 d-flex justify-content-end" data-aos="fade-up" data-aos-delay="200">
-                        <p class="text-997d53 font-weight-light" style="font-size: 14px;">共 {{ 0 }} 則訊息
+                        <p class="text-997d53 font-weight-light" style="font-size: 14px;">共 {{ count($activities) }} 則訊息
                         </p>
                     </div>
 

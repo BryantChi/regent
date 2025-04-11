@@ -64,7 +64,7 @@
                                 <h2 class="text-cba783 font-weight-normal w-100">{{ $activity->title ?? '網站正式啟用' }}</h2>
                                 <p class="text-e9 font-weight-light mb-0" style="font-size: 14px;">
                                     {{ \Carbon\Carbon::parse($activity->created_at ?? '')->format('Y.m.d') ?? '2024.12.15' }} ・
-                                    {{ \App\Models\Admin\Category::find($activity->classification_id ?? '')->name ?? '未分類' }}
+                                    {{ \App\Models\Admin\Classification::find($activity->classification_id ?? '')->name ?? '未分類' }}
                                 </p>
                             </div>
                         </div>

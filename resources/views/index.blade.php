@@ -186,7 +186,7 @@
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="text-a-more wow" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="text-a-more wow mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
                             <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($activities[0]->image ?? '') }}" class="img-fluid" alt="">
                                 {{-- <img src="{{ asset('assets/images/00-hp/in_pic06.jpg') }}" class="img-fluid" alt=""> --}}
@@ -213,7 +213,7 @@
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="text-a-more wow" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="text-a-more wow mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
                             <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($activities[1]->image ?? '') }}" class="img-fluid" alt="">
                                 {{-- <img src="{{ asset('assets/images/00-hp/in_pic07.jpg') }}" class="img-fluid" alt=""> --}}

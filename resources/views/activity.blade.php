@@ -103,7 +103,7 @@
                                 </div>
 
                                 <div class="hab-content02 d-flex flex-column">
-                                    <a href="javascript:void(0);" class="text-a-more" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                                    <a href="{{ route('activity-details', ['id' => $activity->id ?? 0, 'classification_id' => request('classification_id')]) }}" class="text-a-more mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
                                     <a href="{{ route('activity-details', ['id' => $activity->id ?? 0, 'classification_id' => request('classification_id')]) }}" data-aos="zoom-in" data-aos-delay="200">
                                         <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $activity->image ?? '' }}" class="img-fluid" alt="">
                                         {{-- <img src="{{asset('assets/images/00-hp/in_pic06.jpg')}}" class="img-fluid" alt=""> --}}

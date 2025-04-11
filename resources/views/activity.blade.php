@@ -41,12 +41,12 @@
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link {{ empty(request('classification_id')) ? 'active' : '' }}"
-                                    href="{{ route('cases', ['search' => request('search')]) }}">全部</a>
+                                    href="{{ route('activity', ['search' => request('search')]) }}">全部</a>
                             </li>
                             @foreach ($classifications ?? [] as $classification)
                                 <li class="nav-item">
                                     <a class="nav-link {{ request('classification_id') == $classification->id ? 'active' : '' }}"
-                                        href="{{ route('cases', ['classification_id' => $classification->id, 'search' => request('search')]) }}">
+                                        href="{{ route('activity', ['classification_id' => $classification->id, 'search' => request('search')]) }}">
                                         {{ $classification->name }}
                                     </a>
                                 </li>
@@ -134,23 +134,44 @@
 @push('page_scripts')
     <script>
         $(function() {
+            // $(window).on('resize', function() {
+            //     if ($(window).width() <= 992) {
+            //         const $activityCategory = $('.activity-category').hide();
+            //         $('.category-dropdown').find('.c-up').hide();
+
+            //         $('.category-dropdown').on('click', function() {
+            //             $activityCategory.toggle('1500');
+
+            //             if ($activityCategory.is(':visible')) {
+            //                 $(this).find('.c-up').show();
+            //                 $(this).find('.c-down').hide();
+            //             } else {
+            //                 $(this).find('.c-up').hide();
+            //                 $(this).find('.c-down').show();
+            //             }
+            //         });
+            //     } else {
+            //         $('.activity-category').show();
+            //     }
+            // }).trigger('resize');
+
             $(window).on('resize', function() {
                 if ($(window).width() <= 992) {
-                    const $activityCategory = $('.activity-category').hide();
-                    $('.category-dropdown').find('.c-up').hide();
+                    const $activityCategory = $('.activity-category');
+                    $activityCategory.hide();
+                    const $dropdown = $('.category-dropdown');
+                    $dropdown.find('.c-up').hide();
 
-                    $('.category-dropdown').on('click', function() {
-                        $activityCategory.toggle('1500');
-
-                        if ($activityCategory.is(':visible')) {
-                            $(this).find('.c-up').show();
-                            $(this).find('.c-down').hide();
-                        } else {
-                            $(this).find('.c-up').hide();
-                            $(this).find('.c-down').show();
-                        }
+                    // Remove previous click event handlers to prevent multiple bindings
+                    $dropdown.off('click').on('click', function() {
+                        $activityCategory.toggle(1500);
+                        // Check visibility once and toggle icons accordingly
+                        const isVisible = $activityCategory.is(':visible');
+                        $(this).find('.c-up').toggle(isVisible);
+                        $(this).find('.c-down').toggle(!isVisible);
                     });
                 } else {
+                    // When the screen is wider than 992px, always show the category list
                     $('.activity-category').show();
                 }
             }).trigger('resize');

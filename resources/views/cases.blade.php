@@ -68,16 +68,17 @@
                     @foreach ($cases ?? [] as $key => $case)
                         <div class="row mb-4">
                             <div class="col-lg-6 align-self-center mb-lg-0 mb-4 {{ $key % 2 == 0 ? '' : 'order-lg-2 order-1' }}" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $case->image }}"
-                                    class="img-fluid" alt="">
+                                <a href="{{ route('cases-details', ['id' => $case->id, 'category_id' => request('category_id')]) }}">
+                                    <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . $case->image }}"
+                                        class="img-fluid" alt="">
+                                </a>
                             </div>
                             <div class="col-lg-6 align-self-center mb-lg-0 mb-3 {{ $key % 2 == 0 ? '' : 'order-lg-1 order-2' }}" data-aos="fade-up" data-aos-delay="200">
                                 <a href="{{ route('cases', ['category_id' => $case->category_id]) }}">
                                     <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                                         {{ \App\Models\Admin\Category::find($case->category_id)->name }}</h6>
                                 </a>
-                                <a
-                                    href="{{ route('cases-details', ['id' => $case->id, 'category_id' => request('category_id')]) }}">
+                                <a href="{{ route('cases-details', ['id' => $case->id, 'category_id' => request('category_id')]) }}">
                                     <h4 class="text-e9 mb-3">{{ $case->title }}</h4>
                                 </a>
 
@@ -153,23 +154,43 @@
 @push('page_scripts')
     <script>
         $(function() {
+            // $(window).on('resize', function() {
+            //     if ($(window).width() <= 992) {
+            //         const $casesCategory = $('.cases-category').hide();
+            //         $('.category-dropdown').find('.c-up').hide();
+
+            //         $('.category-dropdown').on('click', function() {
+            //             $casesCategory.toggle('1500');
+
+            //             if ($casesCategory.is(':visible')) {
+            //                 $(this).find('.c-up').show();
+            //                 $(this).find('.c-down').hide();
+            //             } else {
+            //                 $(this).find('.c-up').hide();
+            //                 $(this).find('.c-down').show();
+            //             }
+            //         });
+            //     } else {
+            //         $('.cases-category').show();
+            //     }
+            // }).trigger('resize');
             $(window).on('resize', function() {
                 if ($(window).width() <= 992) {
-                    const $casesCategory = $('.cases-category').hide();
-                    $('.category-dropdown').find('.c-up').hide();
+                    const $casesCategory = $('.cases-category');
+                    $casesCategory.hide();
+                    const $dropdown = $('.category-dropdown');
+                    $dropdown.find('.c-up').hide();
 
-                    $('.category-dropdown').on('click', function() {
-                        $casesCategory.toggle('1500');
-
-                        if ($casesCategory.is(':visible')) {
-                            $(this).find('.c-up').show();
-                            $(this).find('.c-down').hide();
-                        } else {
-                            $(this).find('.c-up').hide();
-                            $(this).find('.c-down').show();
-                        }
+                    // Remove previous click event handlers to prevent multiple bindings
+                    $dropdown.off('click').on('click', function() {
+                        $casesCategory.toggle(1500);
+                        // Check visibility once and toggle icons accordingly
+                        const isVisible = $casesCategory.is(':visible');
+                        $(this).find('.c-up').toggle(isVisible);
+                        $(this).find('.c-down').toggle(!isVisible);
                     });
                 } else {
+                    // When the screen is wider than 992px, always show the category list
                     $('.cases-category').show();
                 }
             }).trigger('resize');

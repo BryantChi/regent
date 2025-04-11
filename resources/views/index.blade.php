@@ -66,11 +66,13 @@
             </div>
             <div class="row mb-3">
                 <div class="col-lg-7 align-self-center wow" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[0]->image ?? '') }}"
-                                    class="img-fluid" alt="">
-                    {{-- <img src="{{ asset('assets/images/00-hp/in_pic04.jpg') }}" class="img-fluid" alt=""> --}}
+                    <a href="{{ route('cases-details', ['id' => $cases[0]->id ?? 0, 'category_id' => $cases[0]->category_id ?? '']) }}">
+                        <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[0]->image ?? '') }}"
+                                        class="img-fluid" alt="">
+                        {{-- <img src="{{ asset('assets/images/00-hp/in_pic04.jpg') }}" class="img-fluid" alt=""> --}}
+                    </a>
                 </div>
-                <div class="col-lg-5 pt-5 pl-lg-4 align-self-center wow" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-5 pt-lg-5 pt-3 pl-lg-4 align-self-center wow" data-aos="fade-up" data-aos-delay="200">
                     <a href="{{ route('cases', ['category_id' => $cases[0]->category_id ?? '']) }}">
                         <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                             {{ \App\Models\Admin\Category::find($cases[0]->category_id ?? '')->name ?? '未分類' }}</h6>
@@ -97,12 +99,12 @@
 
             <div class="row mt-5">
 
-                <div class="col-lg-5 pt-5 pl-lg-4 align-self-center wow" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-5 pt-lg-5 pt-3 pl-lg-4 align-self-center wow order-lg-1 order-2" data-aos="fade-up" data-aos-delay="200">
                     <a href="{{ route('cases', ['category_id' => $cases[1]->category_id ?? '']) }}">
                         <h6 class="text-e9 pb-2 wm-content" style="border-bottom: 1px solid #c8a063;">
                             {{ \App\Models\Admin\Category::find($cases[1]->category_id ?? '')->name ?? '未分類' }}</h6>
                     </a>
-                    <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => $cases[1]->category_id ?? '']) }}">
+                    `
                         <h4 class="text-e9 mb-3">{{ $cases[1]->title ?? '張府私宅' }}</h4>
                     </a>
 
@@ -121,10 +123,12 @@
                     <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => $cases[1]->category_id ?? '']) }}"
                         class="text-a-more">MORE →</a>
                 </div>
-                <div class="col-lg-7 align-self-center wow" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[1]->image ?? '') }}"
-                                    class="img-fluid" alt="">
-                    {{-- <img src="{{ asset('assets/images/00-hp/in_pic05.jpg') }}" class="img-fluid" alt=""> --}}
+                <div class="col-lg-7 align-self-center wow order-lg-2 order-1" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="{{ route('cases-details', ['id' => $cases[1]->id ?? 0, 'category_id' => $cases[1]->category_id ?? '']) }}">
+                        <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($cases[1]->image ?? '') }}"
+                                        class="img-fluid" alt="">
+                        {{-- <img src="{{ asset('assets/images/00-hp/in_pic05.jpg') }}" class="img-fluid" alt=""> --}}
+                    </a>
                 </div>
 
             </div>

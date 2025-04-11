@@ -28,7 +28,8 @@
                         </div>
                     </form>
 
-                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="d-lg-none d-flex justify-content-between align-items-center category-dropdown w-100 mt-2"
+                        data-aos="fade-up" data-aos-delay="200">
                         <h5 class="mb-0 text-white text-uppercase fw-bold">案例分類</h5>
                         <span class="text-white c-down">
                             <i class="fas fa-sort-down"></i>
@@ -151,23 +152,43 @@
 @push('page_scripts')
     <script>
         $(function() {
+            // $(window).on('resize', function() {
+            //     if ($(window).width() <= 992) {
+            //         const $casesCategory = $('.cases-category').hide();
+            //         $('.category-dropdown').find('.c-up').hide();
+
+            //         $('.category-dropdown').on('click', function() {
+            //             $casesCategory.toggle('1500');
+
+            //             if ($casesCategory.is(':visible')) {
+            //                 $(this).find('.c-up').show();
+            //                 $(this).find('.c-down').hide();
+            //             } else {
+            //                 $(this).find('.c-up').hide();
+            //                 $(this).find('.c-down').show();
+            //             }
+            //         });
+            //     } else {
+            //         $('.cases-category').show();
+            //     }
+            // }).trigger('resize');
             $(window).on('resize', function() {
                 if ($(window).width() <= 992) {
-                    const $casesCategory = $('.cases-category').hide();
-                    $('.category-dropdown').find('.c-up').hide();
+                    const $casesCategory = $('.cases-category');
+                    $casesCategory.hide();
+                    const $dropdown = $('.category-dropdown');
+                    $dropdown.find('.c-up').hide();
 
-                    $('.category-dropdown').on('click', function() {
-                        $casesCategory.toggle('1500');
-
-                        if ($casesCategory.is(':visible')) {
-                            $(this).find('.c-up').show();
-                            $(this).find('.c-down').hide();
-                        } else {
-                            $(this).find('.c-up').hide();
-                            $(this).find('.c-down').show();
-                        }
+                    // Remove previous click event handlers to prevent multiple bindings
+                    $dropdown.off('click').on('click', function() {
+                        $casesCategory.toggle(1500);
+                        // Check visibility once and toggle icons accordingly
+                        const isVisible = $casesCategory.is(':visible');
+                        $(this).find('.c-up').toggle(isVisible);
+                        $(this).find('.c-down').toggle(!isVisible);
                     });
                 } else {
+                    // When the screen is wider than 992px, always show the category list
                     $('.cases-category').show();
                 }
             }).trigger('resize');

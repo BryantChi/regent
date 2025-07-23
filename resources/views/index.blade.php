@@ -180,14 +180,14 @@
                                     ・{{ \App\Models\Admin\Classification::find($activities[0]->classification_id ?? '')->name ?? '未分類' }}
                                 </p>
                             </a>
-                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}">
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id ?? '']) }}">
                                 <h4 class="text-caa883 ">{{ $activities[0]->title ?? '網站正式啟用' }}</h4>
                             </a>
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="text-a-more wow mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
-                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id ?? '']) }}" class="text-a-more wow mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                            <a href="{{ route('activity-details', ['id' => $activities[0]->id ?? 0, 'classification_id' => $activities[0]->classification_id ?? '']) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($activities[0]->image ?? '') }}" class="img-fluid" alt="">
                                 {{-- <img src="{{ asset('assets/images/00-hp/in_pic06.jpg') }}" class="img-fluid" alt=""> --}}
                             </a>
@@ -207,14 +207,14 @@
                                     ・{{ \App\Models\Admin\Classification::find($activities[1]->classification_id ?? '')->name ?? '未分類' }}
                                 </p>
                             </a>
-                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}">
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id ?? '']) }}">
                                 <h4 class="text-caa883 ">{{ $activities[1]->title ?? '網站正式啟用' }}</h4>
                             </a>
                         </div>
 
                         <div class="hab-content02 d-flex flex-column">
-                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="text-a-more wow mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
-                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id]) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id ?? '']) }}" class="text-a-more wow mb-3" data-aos="fade-up" data-aos-delay="200">MORE →</a>
+                            <a href="{{ route('activity-details', ['id' => $activities[1]->id ?? 0, 'classification_id' => $activities[1]->classification_id ?? '']) }}" class="wow" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="{{ env('APP_URL', 'https://regent-kitchen.com') . '/uploads/' . ($activities[1]->image ?? '') }}" class="img-fluid" alt="">
                                 {{-- <img src="{{ asset('assets/images/00-hp/in_pic07.jpg') }}" class="img-fluid" alt=""> --}}
                             </a>

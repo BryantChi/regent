@@ -76,6 +76,7 @@
                                 @endif
                             </div>
 
+                            {{-- @if ($activity->content ?? null == null)
                             <div class="activity-content">
                                 <h5>麗晶品櫥官方網站正式上線！</h5>
                                 <p>
@@ -104,6 +105,8 @@
                                 </p>
 
                             </div>
+
+                            @endif --}}
 
                         </div>
 
